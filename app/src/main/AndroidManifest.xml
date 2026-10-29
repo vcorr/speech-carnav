@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Phase 0 needs only the microphone. Speech recognition, Maps and TTS run in other apps. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Package visibility (Android 11+): recognition services, TTS engines and Maps. -->
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@android:drawable/ic_btn_speak_now"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.DeviceDefault">
+
+        <activity
+            android:name=".spike.SpikeActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- S3b: started by the system on long-press of a media/headset key while locked. -->
+            <intent-filter>
+                <action android:name="android.speech.action.VOICE_SEARCH_HANDS_FREE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- S4: a second launcher name, to learn which one the assistant hears reliably. -->
+        <activity-alias
+            android:name=".spike.FinnishNavigator"
+            android:exported="true"
+            android:icon="@android:drawable/ic_btn_speak_now"
+            android:label="@string/alias_finnish_navigator"
+            android:targetActivity=".spike.SpikeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+    </application>
+</manifest>

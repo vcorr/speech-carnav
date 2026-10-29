@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher names are what the assistant must hear in English (PLAN.md §11.4). -->
+    <string name="app_name" translatable="false">FinNav</string>
+    <string name="alias_finnish_navigator" translatable="false">Finnish Navigator</string>
+
+    <string name="status_ready">Valmis</string>
+    <string name="status_listening">Kuuntelen…</string>
+    <string name="status_no_permission">Mikrofonin käyttölupa puuttuu</string>
+
+    <!-- Spoken -->
+    <string name="say_navigating">Navigoidaan: %1$s</string>
+    <string name="say_not_heard">En kuullut. Yritä uudelleen.</string>
+    <string name="say_correct">Oikein</string>
+    <string name="say_wrong">Väärin</string>
+    <string name="say_next">Seuraava: %1$s</string>
+    <string name="tts_test_phrase">Navigoidaan: Hämeenkatu 10, Tampere.</string>
+
+    <string name="btn_listen">Kuuntele</string>
+    <string name="btn_prev">Edellinen</string>
+    <string name="btn_next">Seuraava</string>
+    <string name="btn_recogniser">Tunnistin: %1$s</string>
+    <string name="btn_check_support">Tarkista suomen tuki</string>
+    <string name="btn_diagnostics">Diagnostiikka</string>
+    <string name="btn_nav_now">Navigoi nyt</string>
+    <string name="btn_nav_delayed">Navigoi 10 s päästä (lukitse puhelin)</string>
+    <string name="btn_geocode">Geokoodaa</string>
+    <string name="btn_tts_test">Testaa puhe</string>
+    <string name="btn_share">Jaa loki</string>
+    <string name="btn_clear">Tyhjennä loki</string>
+
+    <string name="opt_auto_listen">Kuuntele heti avattaessa</string>
+    <string name="opt_launch_maps">Käynnistä Google Maps</string>
+    <string name="opt_confirm">Vahvista ääneen</string>
+    <string name="opt_maps_during_speech">Käynnistä Maps vahvistuksen aikana</string>
+    <string name="opt_dismiss_keyguard">Avaa lukitus ennen Mapsia</string>
+    <string name="opt_biasing">Ohjaa tunnistusta testisanoilla</string>
+    <string name="opt_corpus">Testisarja</string>
+    <string name="opt_driving">Ajossa</string>
+
+    <string name="hint_destination">Kohde</string>
+    <string name="default_destination">Hämeenkatu 10, Tampere</string>
+    <string name="recogniser_default">oletus</string>
+    <string name="recogniser_on_device">laitteella</string>
+
+    <string name="corpus_prompt">Sano (%1$d/%2$d): %3$s</string>
+    <string name="corpus_score">%1$s: %2$d/%3$d oikein, 95 %% väli %4$d–%5$d %% — %6$s</string>
+    <string name="gate_pass">läpi</string>
+    <string name="gate_fail">ei läpi</string>
+    <string name="gate_more">vähintään %1$d koetta tarvitaan</string>
+    <string name="corpus_no_trials">%1$s: ei vielä kokeita</string>
+</resources>

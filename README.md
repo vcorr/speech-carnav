@@ -15,7 +15,19 @@ See [PLAN.md](PLAN.md) for the design and [docs/SPIKES.md](docs/SPIKES.md) for t
 
 `settings.gradle.kts` includes `app` only when an Android SDK is configured, so `core` builds and tests anywhere.
 
-## Build and install
+## Install on the phone (no computer needed)
+
+Every push builds the app on GitHub (`.github/workflows/build-apk.yml`) and publishes it as the
+**spike-latest** pre-release.
+
+1. On the phone, open the repository on GitHub → **Releases** → *FinNav spike (latest build)*.
+2. Download `finnav-spike.apk` and open it. The first time, Android asks you to allow installing
+   apps from your browser (or Files): allow it.
+3. Open **FinNav** once, unlocked, and grant the microphone permission.
+
+Later builds install over the previous one (they share a fixed debug signing key).
+
+## Build and install with Android Studio
 
 1. Open the project in Android Studio and let it create `local.properties` (SDK path). Accept any
    suggested Android Gradle Plugin upgrade.

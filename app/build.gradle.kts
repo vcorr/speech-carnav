@@ -17,6 +17,16 @@ android {
         versionName = "0.0.1-spike"
     }
 
+    // A fixed debug key, so each CI build installs over the previous one. Debug only: never use it for release.
+    signingConfigs {
+        getByName("debug") {
+            storeFile = file("debug.keystore")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
